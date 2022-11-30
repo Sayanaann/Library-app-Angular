@@ -8,18 +8,18 @@
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Name</label>
-                    <input type="text" class="form-control">
+                    <input  name ="name" [(ngModel)] ="name" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Book Title</label>
-                    <input type="text" class="form-control">
+                    <input  name ="title" [(ngModel)] ="title"  type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Date of Issue</label>
-                    <input type="date" class="form-control">
+                    <input   name ="dateofissue" [(ngModel)] ="dateofissue" type="date" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <button class="btn btn-success">Submit</button>
+                    <button (click)="issue()"class="btn btn-success">Submit</button>
                 </div>
             </div>
         </div>

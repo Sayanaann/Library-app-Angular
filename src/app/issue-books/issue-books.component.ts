@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./issue-books.component.css']
 })
 export class IssueBooksComponent {
+  name=""
+  title=""
+  dateofissue=""
+
+  issue=()=>
+  {
+let data : any ={  "name": this.name,
+"title":this.title,
+"dateofissue": this.dateofissue
+}
+  
+  console.log(data)
+  }
 
 }
