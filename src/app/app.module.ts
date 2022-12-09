@@ -15,6 +15,11 @@ import { IssueBooksComponent } from './issue-books/issue-books.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { Navbar2Component } from './navbar2/navbar2.component';
+import { ViewuserComponent } from './viewuser/viewuser.component';
+import { BooksearchuserComponent } from './booksearchuser/booksearchuser.component';
+import { Navbar3Component } from './navbar3/navbar3.component'
 
 const myRoute:Routes=[
   {
@@ -53,6 +58,15 @@ const myRoute:Routes=[
     path :"issuebooks",
     component :IssueBooksComponent
   },
+  {
+    path :"booksearchuser",
+    component :BooksearchuserComponent
+  },
+  {
+    path :"viewuser",
+    component :ViewuserComponent
+  }
+
   
 
 
@@ -73,13 +87,18 @@ const myRoute:Routes=[
     BookdeleteComponent,
     BookeditComponent,
     IssueBooksComponent,
-    NavBarComponent
+    NavBarComponent,
+    Navbar2Component,
+    ViewuserComponent,
+    BooksearchuserComponent,
+    Navbar3Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(myRoute),
-    FormsModule
+    FormsModule,
+    HttpClientModule
     
 
   ],

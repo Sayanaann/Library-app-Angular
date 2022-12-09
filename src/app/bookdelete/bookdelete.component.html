@@ -1,15 +1,15 @@
-<app-nav-bar></app-nav-bar>
+<app-navbar2></app-navbar2>
 <div class="container">
     <div class="row ">
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" *ngFor="let i of deletebook">
 <div class="row g-3">
-<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"  >
     <label for="" class="form-label">Book Title</label>
      <input name ="booktitle" [(ngModel)] ="booktitle" type="text" class="form-control">
 
 </div>
 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-    <button (click) ="delete()" class="btn btn-danger">Delete</button>
+    <button  (click)=" deleteBtnClick(i.id)" class="btn btn-danger">Delete</button>
 
 
 </div>

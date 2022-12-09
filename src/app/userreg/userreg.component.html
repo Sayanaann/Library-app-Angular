@@ -4,7 +4,7 @@
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
         <div class="row g-3">
-            <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
                 <h2 >User Registration</h2>
             </div>
             <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
@@ -13,7 +13,7 @@
             </div>
             <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <label for="" class="form-label">Aadhar No.</label>
-                <input  name ="aadhar" [(ngModel)] ="aadhar" type="number" class="form-control">
+                <input  name ="aadharno" [(ngModel)] ="aadharno" type="number" class="form-control">
             </div>
             <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <label for="" class="form-label">Address</label>
@@ -25,7 +25,7 @@
             </div>
             <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <label for="" class="form-label">Date of Birth</label>
-                <input  name ="dateofbirth" [(ngModel)] ="dateofbirth"type="number" class="form-control">
+                <input  name ="dateofbirth" [(ngModel)] ="dateofbirth"type="date" class="form-control">
             </div>
             <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <label for="" class="form-label">Email id</label>
@@ -50,8 +50,8 @@
             <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <button  (click)="reg()" class="btn btn-success">Register</button>
             </div>
-            <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                <a href="" class="text-light">User Login</a>
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <div class=" small">Click here<a class="card-link" routerLink="/userlogin">User Login</a></div>
             </div>
         </div>
 

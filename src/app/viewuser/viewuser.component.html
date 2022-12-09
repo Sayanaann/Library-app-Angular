@@ -1,17 +1,18 @@
-<app-navbar2></app-navbar2>
+<app-navbar3></app-navbar3>
 <div class="container">
-    <div class="row g-3">
+    <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 <div class="row g-3">
     <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor = "let i of books">
         <div class="card">
-            <img height="300px" width="300px" class="square mx-auto" src="{{i.image}}" class="card-img-top" alt="...">
-            <div class="card h-100">
-              <h2 class="card-title" >{{i.booktitle}}</h2>
+            <img height="300px" width="200px" class="square mx-auto" src="{{i.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h2 class="card-title">{{i.booktitle}}</h2>
               <h5 class="card-text">Price :{{i.price}}</h5>
               <p class="card-text">Author :{{i.author}}</p>
+              <p class="card-text">Language:{{i.language}}</p>
               
-              
+             
               
             </div>
           </div>

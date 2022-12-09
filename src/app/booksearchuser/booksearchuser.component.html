@@ -1,4 +1,4 @@
-<app-navbar2></app-navbar2>
+<app-navbar3></app-navbar3>
 <div class="container">
     <div class="row ">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -27,16 +27,15 @@
                     <div class="card-body">
                       <h5 class="card-title">{{i.booktitle}}</h5>
                     </div>
-                        <h5 class="card-text">{{i.price}}</h5>
-                        <p class="card-text">{{i.author}}</p>
-                        <p class="card-text">{{i.description}}</p>
-                        <p class="card-text">{{i.publisher}}</p>
-                        <p class="card-text">{{i.language}}</p>
-                        <p class="card-text">{{i.distributer}}</p>
-                        <p class="card-text">{{i.releasedyear}}</p>
-                        <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                      <button  (click)=" deleteBtnClick(i.id)" class="btn btn-danger">Delete</button>
-                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">{{i.price}}</li>
+                      <li class="list-group-item">{{i.author}}</li>
+                      <li class="list-group-item">{{i.description}}</li>
+                      <li class="list-group-item">{{i.publisher}}</li>
+                      <li class="list-group-item">{{i.language}}</li>
+                      <li class="list-group-item">{{i.distributer}}</li>
+                      <li class="list-group-item">{{i.releasedyear}}</li>
+                    </ul>
                   </div>
             </div>
         </div>
@@ -48,3 +47,4 @@
 
     </div>
 </div> 
+

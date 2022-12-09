@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-booksentry',
@@ -6,17 +7,38 @@ import { Component } from '@angular/core';
   styleUrls: ['./booksentry.component.css']
 })
 export class BooksentryComponent {
-  title=""
-  image=""
+  booktitle=""
+  author=""
+  description=""
+  publisher=""
+  language=""
+  distributer=""
+  releasedyear=""
   price=""
-
+  image=""
+  
+  constructor(private api:ApiService){}
   readvalues=()=>
   {
-let data : any ={ "title" :this.title,
-"image" : this.image,
-"price":this.price}
+let data : any ={ "booktitle" :this.booktitle,"author":this.author,
+"description":this.description,
+"publisher":this.publisher,
+"language":this.language,
+"distributer":this.distributer,
+"releasedyear":this.releasedyear,
+"price":this.price,
+"image":this.image
+}
   
-  console.log(data)
+console.log(data)
+this.api.addbook(data).subscribe(
+  (response:any)=>{
+  console.log(response)
+  alert("Data Added")
+}
+
+)
   }
+
 
 }

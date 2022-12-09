@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-viewallbooks',
-  templateUrl: './viewallbooks.component.html',
-  styleUrls: ['./viewallbooks.component.css']
+  selector: 'app-viewuser',
+  templateUrl: './viewuser.component.html',
+  styleUrls: ['./viewuser.component.css']
 })
-export class ViewallbooksComponent {
+export class ViewuserComponent {
   constructor(private api :ApiService){
     api.fetchbook().subscribe(
   

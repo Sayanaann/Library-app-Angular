@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-userreg',
@@ -7,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class UserregComponent {
   name=""
-  aadhar=""
+  aadharno=""
   address=""
   pincode=""
   dateofbirth=""
@@ -17,11 +19,12 @@ export class UserregComponent {
   password=""
   confirmpassword=""
   
+  constructor( private api:ApiService,private route:Router){}
 
   reg=()=>
   {
 let data : any ={ "name":this.name,
-"aadhar":this.aadhar,
+"aadharno":this.aadharno,
 "address":this.address,
 "pincode":this.pincode,
 "dateofbirth":this.dateofbirth,
@@ -33,7 +36,30 @@ let data : any ={ "name":this.name,
 
 }
   
-  console.log(data)
+if(this.password==this.confirmpassword){
+  this.api.adduser(data).subscribe(
+
+    (response)=>{
+      console.log(response)
+      alert("registration successfull")
+      this.name=""
+      this.aadharno=""
+      this.address=""
+      this.pincode=""
+      this.dateofbirth=""
+      this.emailid=""
+      this.phoneno=""
+      this.username=""
+      this.password=""
+      this.confirmpassword=""   
+    })
+  }else{
+    alert("password & confirm password doesn't match,try again")
+    this.password=""
+    this.confirmpassword=""
   }
+   
+
+}
 
 }
